@@ -12,6 +12,9 @@ class Stats(ABC):
         self.special_skill_count = special_skill_count if special_skill_count else 4
 
 class BaseStats(Stats):
+    '''
+    Base stats are used to reset hero stats when needed
+    '''
     def __init__(self, hp, cp, defense=None, special_skill_damage=None, 
         special_skill_count=None) -> None:
         super().__init__(hp, cp, defense=None, special_skill_damage=None, 
