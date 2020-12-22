@@ -3,10 +3,20 @@ in one turn of game, it should be be processed like this
 process and find target for each hero
 set the stat before skills and traits: 
     - damage to be dealt to each hero
-apply skills: this step might change stats, 
-    including speed, hp, defense
-apply traits: this step might change stats too
-apply effects: (effects that change hp, cp, defense) this step migth change stats too
+apply skills: 
+    - this step might change stats, including speed, hp, defense
+    - one skill only belongs to one hero
+    - this skill is basically a simple version of trait
+    - skill has cooldown period
+apply traits: this traits might belong to multiple heros
+    - this step might change stats too
+    - attach effects on heroes that are influenced
+    - for example:
+        - duelist will increase certain hero's speed
+        - venomist will decrease other hero's health
+apply effects: 
+    - (effects that change hp, cp, defense) this step migth change stats too
+    - apply the effects
 apply change:
     - set defense
     - deal damage (based on damage level)

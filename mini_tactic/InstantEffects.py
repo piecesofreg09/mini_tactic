@@ -5,27 +5,23 @@ sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
 from abc import ABC, abstractmethod
 from Hero import Hero
-from Effects import *
 
-class Trait(ABC):
+class InstantEffect(ABC):
+    '''
+    base class for instant effect
+    effect is when some influence lasts a certain number of rounds
+    instance variable:
+        countdown: the duration of countdown, default to be last forever
+    '''
+
+    test_str = 'new'
+    
 
     @abstractmethod
     def __init__(self) -> None:
         super().__init__()
-        self.name = None
+        self.countdown = None
     
     @abstractmethod
-    def apply_trait(self, target_hero: Hero):
+    def apply_effect(self, target_hero: Hero):
         pass
-
-
-class Duelist(Trait):
-    
-    def __init__(self) -> None:
-        super().__init__()
-        
-
-class Motorist(Trait):
-
-    def __init__(self) -> None:
-        super().__init__()

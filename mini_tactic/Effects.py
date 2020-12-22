@@ -9,7 +9,8 @@ from Hero import Hero
 class Effect(ABC):
     '''
     base class for effect
-    class variable:
+    effect is when some influence lasts a certain number of rounds
+    instance variable:
         countdown: the duration of countdown, default to be last forever
     '''
 
