@@ -37,6 +37,9 @@ class Vanisher(Skill):
     '''
     def __init__(self, cooldown=5):
         super().__init__(cooldown)
+    
+    def apply_skill(self):
+        pass
         
 
 class Elephant(Skill):
@@ -45,6 +48,9 @@ class Elephant(Skill):
     '''
     def __init__(self, cooldown=3):
         super().__init__(cooldown)
+    
+    def apply_skill(self):
+        pass
         
 
 class Duplicate(Skill):
